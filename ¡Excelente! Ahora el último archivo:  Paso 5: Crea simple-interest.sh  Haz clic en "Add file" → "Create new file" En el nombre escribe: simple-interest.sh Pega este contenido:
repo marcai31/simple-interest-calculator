@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Simple Interest Calculator
+# This script calculates simple interest based on user input
+
+echo "***************************"
+echo "Simple Interest Calculator"
+echo "***************************"
+
+# Input: Principal amount
+echo "Enter the principal amount:"
+read principal
+
+# Input: Rate of interest
+echo "Enter the rate of interest (in %):"
+read rate
+
+# Input: Time period
+echo "Enter the time period (in years):"
+read time
+
+# Calculate simple interest
+simple_interest=$(echo "scale=2; $principal * $rate * $time / 100" | bc)
+
+# Output result
+echo "***************************"
+echo "Principal: $principal"
+echo "Rate of Interest: $rate%"
+echo "Time Period: $time years"
+echo "Simple Interest: $simple_interest"
+echo "***************************"
